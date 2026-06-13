@@ -27,7 +27,9 @@ public class _01_IntroToArrays {
         }
         // 6. use a for loop to print all the values in the array
         //    BE SURE TO USE THE ARRAY'S length VARIABLE
-
+        for(int i = 0; i < lakers.length; i++){
+            System.out.println(lakers[i]);
+        }
         // 7. make an array of 50 integers
 
         // 8. use a for loop to make every value of the integer array a random
