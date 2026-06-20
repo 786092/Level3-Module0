@@ -22,6 +22,7 @@ public class _01_IntroToArrays {
         //    of your choice
         String myChoice = "Black Mamba";
 
+
         for (int i = 0; i < lakers.length; i++) {
             lakers[i] = myChoice;
         }
@@ -31,15 +32,30 @@ public class _01_IntroToArrays {
             System.out.println(lakers[i]);
         }
         // 7. make an array of 50 integers
-
+        int[] fifty = new int[50];
         // 8. use a for loop to make every value of the integer array a random
         //    number
+        Random rand = new Random();
 
+        for (int i = 0; i < fifty.length; i++) {
+            // rand.nextInt(100) generates a random integer from 0 to 99
+            fifty[i] = rand.nextInt(100);
+        }
         // 9. without printing the entire array, print only the smallest number
         //    on the array
+        int smallest = fifty[0];
 
+        for (int i = 1; i < fifty.length; i++) {
+            if (fifty[i] < smallest) {
+                smallest = fifty[i];
+            }
+        }
+
+        System.out.println("The smallest number is: " + smallest);
         // 10 print the entire array to see if step 8 was correct
-
+        for (int i = 0; i < fifty.length; i++) {
+            System.out.println(fifty[i]);
+        }
         // 11. print the largest number in the array.
 
         // 12. print only the last element in the array
