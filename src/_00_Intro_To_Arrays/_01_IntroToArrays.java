@@ -11,7 +11,7 @@ public class _01_IntroToArrays {
         lakers[1] = "Shaq";
         lakers[2] = "Jerry West";
         lakers[3] = "LeBron James";
-        lakers [4] = "Luka Doncic";
+        lakers[4] = "Luka Doncic";
         // 2. print the third element in the array
         System.out.println(lakers[2]);
         // 3. set the third element to a different value
@@ -28,8 +28,8 @@ public class _01_IntroToArrays {
         }
         // 6. use a for loop to print all the values in the array
         //    BE SURE TO USE THE ARRAY'S length VARIABLE
-        for(int i = 0; i < lakers.length; i++){
-            System.out.println(lakers[i]);
+        for (String laker : lakers) {
+            System.out.println(laker);
         }
         // 7. make an array of 50 integers
         int[] fifty = new int[50];
@@ -53,12 +53,20 @@ public class _01_IntroToArrays {
 
         System.out.println("The smallest number is: " + smallest);
         // 10 print the entire array to see if step 8 was correct
-        for (int i = 0; i < fifty.length; i++) {
-            System.out.println(fifty[i]);
+        for (int j : fifty) {
+            System.out.println(j);
         }
         // 11. print the largest number in the array.
+        int largest = fifty[0];
 
+        for (int i = 1; i < fifty.length; i++) {
+            if (fifty[i] > largest) {
+                largest = fifty[i];
+            }
+        }
+
+        System.out.println("The largest number is: " + largest);
         // 12. print only the last element in the array
-
+        System.out.println("The last element is: " + fifty[fifty.length - 1]);
     }
 }
