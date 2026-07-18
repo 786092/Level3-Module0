@@ -16,11 +16,12 @@ public class _02_RobotRace {
             robots[i] = new Robot();
 
             // 4. make each robot start at the bottom of the screen, side by side, facing up
-            robots[i].setX(50);
-            robots[i].setY(550);
+            int startingX = 50;
+            int startingY = 550;
+            int speed = 10;
             robots[i].setX(startingX);
             robots[i].setY(startingY);
-            robots[i].setSpeed(10);
+            robots[i].setSpeed(speed);
         }
         Random rand = new Random();
         boolean isRaceWon = false;
