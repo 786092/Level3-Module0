@@ -16,7 +16,7 @@ public class _02_RobotRace {
             robots[i] = new Robot();
 
             // 4. make each robot start at the bottom of the screen, side by side, facing up
-            int startingX = 50;
+            int startingX = i*200+50;
             int startingY = 550;
             int speed = 10;
             robots[i].setX(startingX);
