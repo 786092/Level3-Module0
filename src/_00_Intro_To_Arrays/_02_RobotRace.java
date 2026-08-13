@@ -58,14 +58,29 @@ public class _02_RobotRace {
             for (int i = 0; i < robots.length; i++) {
                 robots[i] = new Robot();
 
-                int startingX = 50 + (i * (700 / totalRobots));
+                int startingX = 50 + (i * (1000 / totalRobots));
                 int startingY = 550;
 
                 robots[i].setX(startingX);
                 robots[i].setY(startingY);
                 robots[i].setSpeed(10);
             }
+            Boolean isRaceWon2 = false;
+            while (!isRaceWon2) {
 
+                // 5. use another for loop to iterate through the array and make each robot move
+                // a random amount less than 50.
+                for (int i = 0; i < robots.length; i++) {
+                    int randomDistance = rand.nextInt(50);
+                    robots[i].move(randomDistance);
+
+                    if (robots[i].getY() <= 50) {
+                        isRaceWon2 = true;
+                        winnerIndex = i;
+                        break;
+                    }
+                }
+            }
 
             // Race loop
 
